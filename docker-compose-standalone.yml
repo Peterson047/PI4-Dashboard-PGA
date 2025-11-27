@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:8.0
+    container_name: pga_mongodb
+    restart: unless-stopped
+    ports:
+      - "27018:27017"
+    volumes:
+      # 1. Script SH para rodar o mongorestore (executa no init)
+      - ./scripts/restore.sh:/docker-entrypoint-initdb.d/20-restore.sh:ro
+      
+      # 2. A pasta de backup montada para o script de restore
+      - ./mongodb_backup/db_pga:/backup:ro
+      
+      # 3. Volume persistente para dados
+      - mongo_data:/data/db
+    
+    # Sem autenticação (melhor para dev)
+    # environment:
+    #   - MONGO_INITDB_DATABASE=db_pga
+    
+    networks:
+      - pga-network
+    
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.runCommand({ ping: 1 })"]
+      interval: 5s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+
+  pga-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile.standalone
+      args:
+        - MONGODB_URI=mongodb://mongodb:27017/db_pga
+        - JWT_SECRET=seu_jwt_secret_aqui
+    
+    container_name: pga-dashboard
+    working_dir: /app
+    
+    ports:
+      - "3000:3000"
+    
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=mongodb://mongodb:27017/db_pga
+      - JWT_SECRET=seu_jwt_secret_aqui
+      - NEXT_PUBLIC_API_URL=http://localhost:3000/api
+    
+    # Removido o bind mount - tudo será copiado para o container durante o build
+    # volumes:
+    #   - .:/app:cached
+    
+    # Usando o comando padrão do Dockerfile
+    # command: ["/bin/bash", "-lc", "npm run build && npm start"]
+    
+    networks:
+      - pga-network
+
+volumes:
+  mongo_data:
+    driver: local
+
+networks:
+  pga-network:
+    driver: bridge

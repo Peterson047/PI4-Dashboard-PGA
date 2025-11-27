@@ -1,0 +1,11 @@
+env/
+node_modules/
+# Arquivos de saída temporários
+resultado_normalizado.json
+.next/
+
+# Python cache
+__pycache__/
+
+# Gemini CLI temp help files
+help/dump/

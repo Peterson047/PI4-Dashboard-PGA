@@ -1,0 +1,190 @@
+{
+  "_id": { "$oid": "68ab974fe8880e2a1a610075" },
+  "ano_referencia": 2025,
+  "versao_documento": "V03",
+  "identificacao_unidade": {
+    "codigo": "código F302",
+    "nome": "Fatec Sorocaba",
+    "diretor": "Prof. Dr. Carlos Silva Santos"
+  },
+  "analise_cenario": "A Fatec Sorocaba, localizada no centro da região metropolitana de Sorocaba, é uma das unidades mais consolidadas do Centro Paula Souza. Fundada em 1970, oferece diversos cursos superiores de tecnologia para atender a demanda industrial da região. Com uma infraestrutura robusta e corpo docente qualificado, a instituição busca constantemente a excelência no ensino tecnológico. A região de Sorocaba é um importante polo industrial do interior paulista, abrigando empresas de diversos setores como automobilístico, metalúrgico, têxtil e tecnológico.",
+  "metadados_extracao": {
+    "nome_arquivo_original": "dados_sorocaba_extraidos.json",
+    "data_extracao": "2025-08-24T20:15:30.123456Z"
+  },
+  "situacoes_problema_gerais": [
+    "Modernização de laboratórios de informática",
+    "Ampliação da biblioteca digital",
+    "Melhoria na infraestrutura de rede",
+    "Capacitação docente em novas tecnologias"
+  ],
+  "acoes_projetos": [
+    {
+      "codigo_acao": "201",
+      "titulo": "cat 2.01 - Modernização de Laboratórios de Informática",
+      "origem_prioridade": "2-Gestão Estratégica - Modernização tecnológica",
+      "o_que_sera_feito": "Atualização completa dos laboratórios de informática com novos equipamentos e software",
+      "por_que_sera_feito": "Para proporcionar aos alunos acesso às tecnologias mais atuais do mercado",
+      "custo_estimado": 850000,
+      "fonte_recursos": "Centro Paula Souza (Licitação)",
+      "periodo_execucao": {
+        "data_inicial": "2025-03-01T00:00:00Z",
+        "data_final": "2025-11-30T00:00:00Z"
+      },
+      "equipe": [
+        {
+          "funcao": "Responsável",
+          "nome": "Prof. Ana Maria Silva",
+          "carga_horaria_semanal": 4,
+          "tipo_hora": "HA - Hora Atividade"
+        },
+        {
+          "funcao": "Colaborador(a)",
+          "nome": "Prof. João Santos",
+          "carga_horaria_semanal": 2,
+          "tipo_hora": "HA - Hora Atividade"
+        }
+      ],
+      "etapas_processo": [
+        {
+          "descricao": "Levantamento de necessidades tecnológicas",
+          "inicio": "01/03",
+          "fim": "15/03"
+        },
+        {
+          "descricao": "Elaboração de especificações técnicas",
+          "inicio": "16/03",
+          "fim": "30/03"
+        },
+        {
+          "descricao": "Processo licitatório",
+          "inicio": "01/04",
+          "fim": "30/06"
+        },
+        {
+          "descricao": "Instalação e configuração dos equipamentos",
+          "inicio": "01/07",
+          "fim": "30/11"
+        }
+      ]
+    },
+    {
+      "codigo_acao": "301",
+      "titulo": "cat 3.01 - Programa de Extensão em Inteligência Artificial",
+      "origem_prioridade": "3-Gestão Tática - Extensão universitária",
+      "o_que_sera_feito": "Desenvolvimento de cursos de extensão em IA para a comunidade externa",
+      "por_que_sera_feito": "Para democratizar o conhecimento em IA e fortalecer a relação com a comunidade",
+      "custo_estimado": 25000,
+      "fonte_recursos": "Recursos próprios",
+      "periodo_execucao": {
+        "data_inicial": "2025-04-01T00:00:00Z",
+        "data_final": "2025-12-15T00:00:00Z"
+      },
+      "equipe": [
+        {
+          "funcao": "Responsável",
+          "nome": "Prof. Dr. Roberto Lima",
+          "carga_horaria_semanal": 6,
+          "tipo_hora": "HA - Hora Atividade"
+        },
+        {
+          "funcao": "Colaborador(a)",
+          "nome": "Prof. Maria Fernanda",
+          "carga_horaria_semanal": 4,
+          "tipo_hora": "HA - Hora Atividade"
+        }
+      ],
+      "etapas_processo": [
+        {
+          "descricao": "Planejamento do programa de extensão",
+          "inicio": "01/04",
+          "fim": "15/04"
+        },
+        {
+          "descricao": "Desenvolvimento do material didático",
+          "inicio": "16/04",
+          "fim": "31/05"
+        },
+        {
+          "descricao": "Divulgação e inscrições",
+          "inicio": "01/06",
+          "fim": "30/06"
+        },
+        {
+          "descricao": "Execução dos cursos",
+          "inicio": "01/07",
+          "fim": "15/12"
+        }
+      ]
+    },
+    {
+      "codigo_acao": "401",
+      "titulo": "cat 4.01 - Projeto de Sustentabilidade Ambiental",
+      "origem_prioridade": "4-Gestão Operacional - Sustentabilidade",
+      "o_que_sera_feito": "Implementação de práticas sustentáveis no campus e conscientização ambiental",
+      "por_que_sera_feito": "Para reduzir o impacto ambiental da instituição e formar cidadãos conscientes",
+      "custo_estimado": 45000,
+      "fonte_recursos": "Parcerias e editais",
+      "periodo_execucao": {
+        "data_inicial": "2025-02-01T00:00:00Z",
+        "data_final": "2025-12-31T00:00:00Z"
+      },
+      "equipe": [
+        {
+          "funcao": "Responsável",
+          "nome": "Prof. Dra. Lucia Verde",
+          "carga_horaria_semanal": 3,
+          "tipo_hora": "HA - Hora Atividade"
+        }
+      ],
+      "etapas_processo": [
+        {
+          "descricao": "Diagnóstico ambiental do campus",
+          "inicio": "01/02",
+          "fim": "28/02"
+        },
+        {
+          "descricao": "Implementação de coleta seletiva",
+          "inicio": "01/03",
+          "fim": "31/03"
+        },
+        {
+          "descricao": "Campanhas de conscientização",
+          "inicio": "01/04",
+          "fim": "31/12"
+        }
+      ]
+    }
+  ],
+  "anexo1_aquisicoes": [
+    {
+      "item": 1,
+      "projeto_referencia": "201",
+      "denominacao": "Computadores Desktop - Configuração Avançada",
+      "quantidade": 120,
+      "preco_total_estimado": 480000
+    },
+    {
+      "item": 2,
+      "projeto_referencia": "201",
+      "denominacao": "Monitores 4K - 27 polegadas",
+      "quantidade": 120,
+      "preco_total_estimado": 180000
+    },
+    {
+      "item": 3,
+      "projeto_referencia": "201",
+      "denominacao": "Software de Desenvolvimento - Licenças",
+      "quantidade": 150,
+      "preco_total_estimado": 190000
+    },
+    {
+      "item": 4,
+      "projeto_referencia": "401",
+      "denominacao": "Sistema de Energia Solar",
+      "quantidade": 1,
+      "preco_total_estimado": 45000
+    }
+  ]
+}
+

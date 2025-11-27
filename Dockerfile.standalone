@@ -1,0 +1,28 @@
+FROM node:20-alpine
+
+# Install Python and other build tools required for Python dependencies
+RUN apk add --no-cache python3 py3-pip build-base bash curl
+
+WORKDIR /app
+
+# Copy project files
+COPY . /app
+
+# Create a virtual environment and install Python requirements
+RUN python3 -m venv /opt/venv \
+    && /opt/venv/bin/pip install --upgrade pip setuptools wheel \
+    && if [ -f "/app/requirements.txt" ]; then /opt/venv/bin/pip install -r /app/requirements.txt; fi
+
+# Install Node dependencies
+RUN npm install --legacy-peer-deps
+
+# Build the Next.js application
+RUN npm run build
+
+ENV PATH="/opt/venv/bin:$PATH"
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Default command to run the application
+CMD ["npm", "start"]
